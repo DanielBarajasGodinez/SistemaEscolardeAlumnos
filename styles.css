@@ -1,0 +1,114 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://img.freepik.com/fotos-premium/papeles-pared-fondo-flujo-energia-fondos-pantalla-geniales-fondos-pantalla-lindos-fondo-pantalla-telefono-fondos-geniales-fondos-lindos_947865-2332.jpg?w=996);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e4d33e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+::-webkit-scrollbar{
+    width:5px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #bce409;
+    border-radius: 10px;
+
+}
+.scrollbox{
+    overflow: auto;
+    padding-right: 10px;
+
+}
+.scrollbox-inner{
+    visibility: visible;
+}
+
+h1 {
+    text-align: center;
+    color: #f11414;
+}
+H2{
+    text-align:center;
+    color:#4410ff9a;
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0px 16px;
+    background-color:rgb(212, 50, 72);
+    color: #fff;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0px 4px;
+    height: 36px;
+    margin:auto;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #098013;
+}
+
+#resultados {
+    text-align: center;        
+}
+
+#promedioAlumnosResultados{
+    text-align: center;    
+}
+
+#mostrarResultadosCalificacion{
+    text-align: center;
+}
+
+#busqueda {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.error{
+    color: rgba(212, 33, 10, 0.935);
+    font-family: inherit;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.oculto{
+    display: none;
+}

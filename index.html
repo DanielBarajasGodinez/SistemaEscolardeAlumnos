@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar de Alumnos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SISTEMA DE REGISTRO DE ESTUDIANTES</h1>
+        <div id="formulario" class="section">
+            <h2>Alta de Estudiantes</h2>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <input type="number" id="edad" placeholder="Edad">
+            <button onclick="altaAlumno()">Dar de Alta al Estudiante</button>
+            <span class="oculto" id="errorExisteAlumno">¡El alumno ya existe en la base de datos!</span>
+            <span class="oculto" id="errorEdad">¡Solo se aceptan mayores de edad!</span>
+            <span class="oculto" id="errorTexto">¡No se admiten caracteres especiales, espacios al principio o final, ni valores numéricos!</span>
+        </div>
+        <div id="materias" class="section">
+            <h2>Asignación de Materias Escolares</h2>
+            <input type="text" id="materiaNombre" placeholder="Nombre de la Materia">
+            <button onclick="crearClase()">Dar de Alta la Materia</button>
+            <span class="oculto" id="errorClaseInscrita">La materia ya existe</span>
+            <span class="oculto" id="errorTextoClase">¡No se admiten caracteres especiales, espacios al principio o final, ni valores numéricos!</span>
+        </div>
+        <div id="inscripcion" class="section">
+            <h2>Inscripción del estudiante a una materia escolar</h2>
+            <select id="alumnosInscripcion">
+                <!-- Opciones de alumnos -->
+            </select>
+            <select id="materiasInscripcion">
+                <!-- Opciones de materias -->
+            </select>
+            <button onclick="asignarClase()">Inscribir</button>
+            <span class="oculto" id="errorInscrito">El alumno ya se ha inscrito a la clase</span>
+        </div>
+        <div id="calificaciones" class="section">
+            <h2>Asignación de Calificaciones</h2>
+            <select id="alumnosCal">
+                <!-- Opciones de alumnos -->
+            </select>
+            <select id="materiasCal">
+                
+            </select>
+            <input type="number" id="calificacion" placeholder="Calificación">
+            <button onclick="asignarCalificacion()">Colocar Calificación</button>
+            <span class="oculto" id="errorNumNegativo">Unicamente valores positivos</span>
+            <span class="oculto" id="errorNoInscrito">El estudiante no está inscrito a esta materia escolar</span>
+            <span class="oculto" id="errorNotNullCali">El estudiante ya tiene una calificación asignada para esta materia escolar</span>
+        </div>
+        <div id="resultados" class="section">
+            <h2>Consultar Información de Estudiantes</h2>
+            <button onclick="buscarPorNombreApellido()">Buscar estudiante por Nombre o Apellido</button>
+            <button onclick="obtenerPromedioAlumnos()">Promedio del grupo</button>
+            <button onclick="ordenarAlumnosAscendente()">Ordenar por Nombre Ascendente</button>
+            <button onclick="ordenarAlumnosDescendente()">Ordenar por Nombre en Descendente</button>
+            <button onclick="ordenarAlumnosCalificacionAscendente()">Ordenar por Calificación Ascendente</button>
+            <button onclick="ordenarAlumnosCalificacionDescendente()">Ordenar por Calificación Descendente</button>
+            <button onclick="borrarDatos()">Eliminar Todos los Datos</button>
+            <button onclick="location.reload()">Actualizar Información</button>
+            <div id="busqueda"></div>
+        </div>
+        <div id="promedioAlumnosResultados" class="section">
+            <!-- Aquí se mostrarán los resultados del promedio de alumnos -->
+        </div>
+        <div id="mostrarResultadosCalificacion" class="section">            
+            <!-- Aquí se mostrarán los resultados del ordenamiento por calificacion de alumnos -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
